@@ -60,8 +60,8 @@
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(47, 53, 66, 0.8), rgba(47, 53, 66, 0.8)), url('https://images.unsplash.com/photo-1617897903246-719242758050?auto=format&fit=crop&w=1920&q=80') center/cover;
-            height: 40vh;
+            background: linear-gradient(rgba(47, 53, 66, 0.4), rgba(47, 53, 66, 0.4)), url('https://github.com/yasirarafatnub-ai/eloria-bd/blob/main/Brown%20and%20Beige%20Aesthetic%20Minimalist%20Restaurant%20Banner.jpg?raw=true') center/cover;
+            height: 50vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -74,11 +74,13 @@
         .hero h1 {
             font-size: 3rem;
             margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
 
         .hero p {
             font-size: 1.2rem;
             max-width: 600px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
         }
 
         /* Product Grid */
@@ -205,7 +207,7 @@
 
     <section class="hero">
         <h1>Welcome to Eloria bd</h1>
-        <p>Premium Authentic Skincare, Cleansers & Beauty Essentials directly to your doorstep.</p>
+        <p>Discover your true beauty with us.</p>
     </section>
 
     <div class="container">
@@ -220,7 +222,6 @@
     </footer>
 
     <script>
-        // Your complete product catalog
         const products = [
             { name: "Cartoon Fresh Cute Gold-plated Little Milk Rabbit Wear Cartoon Style Girl's Heart Hand-painted Short 10 Pieces", oldPrice: 380, newPrice: 230, discount: 39 },
             { name: "Short White Moonlight Cat-Eye Nail Tips with High-Quality Gold-Plated Blue Gemstones (10) pieces", oldPrice: 350, newPrice: 300, discount: 14 },
@@ -255,9 +256,7 @@
         const grid = document.getElementById('product-grid');
         let cartCount = 0;
 
-        // Render products
         products.forEach(product => {
-            // Using a generic cosmetic placeholder image for display purposes
             const imgUrl = "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=400&q=80";
             
             const card = document.createElement('div');
@@ -275,11 +274,9 @@
             grid.appendChild(card);
         });
 
-        // Cart Functionality
         function addToCart() {
             cartCount++;
             document.getElementById('cart-count').innerText = cartCount;
-            // Visual feedback
             event.target.innerText = "Added ✓";
             event.target.style.background = "#2ed573";
             setTimeout(() => {
